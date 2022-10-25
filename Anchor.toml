@@ -1,7 +1,7 @@
 [features]
 seeds = false
 skip-lint = false
-[programs.localnet]
+[programs.devnet]
 solana_dapp = "65D1me4RDs45aHUb59Uv7RcGFivkxvFVTDoDWvNfaE41"
 
 [registry]
