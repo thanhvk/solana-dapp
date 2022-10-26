@@ -19,7 +19,6 @@ pub mod solana_dapp {
     }
 }
 
-// Transaction instructions
 #[derive(Accounts)]
 pub struct Create<'info> {
     #[account(init, payer = user, space = 16 + 16)]
@@ -29,14 +28,12 @@ pub struct Create<'info> {
     pub system_program: Program <'info, System>,
 }
 
-// Transaction instructions
 #[derive(Accounts)]
 pub struct Increment<'info> {
     #[account(mut)]
     pub base_account: Account<'info, BaseAccount>,
 }
 
-// An account that goes inside a transaction instruction
 #[account]
 pub struct BaseAccount {
     pub count: u64,

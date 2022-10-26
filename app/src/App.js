@@ -13,7 +13,6 @@ import idl from "./idl.json";
 require("@solana/wallet-adapter-react-ui/styles.css");
 
 const wallets = [
-  /* view list of available wallets at https://github.com/solana-labs/wallet-adapter#wallets */
   new PhantomWalletAdapter()
 ]
 
@@ -35,7 +34,7 @@ function App() {
   async function getProvider() {
     /* create the provider and return it to the caller */
     const network = clusterApiUrl("devnet");
-    const connection = new Connection(network, opts.preflightCommitment);
+    const connection = new Connection(network, opts.commitment);
 
     const provider = new AnchorProvider(
       connection,
@@ -150,7 +149,7 @@ function App() {
 
 const AppWithProvider = () => (
   <ConnectionProvider endpoint={clusterApiUrl("devnet")}>
-    <WalletProvider wallets={wallets}>
+    <WalletProvider wallets={wallets} autoConnect>
       <WalletModalProvider>
         <App />
       </WalletModalProvider>
