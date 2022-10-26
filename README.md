@@ -17,7 +17,13 @@ https://book.anchor-lang.com/getting_started/installation.html
 
 ## Set Up Wallet Adapter
 
-Setup: https://github.com/solana-labs/wallet-adapter/blob/master/APP.md
+Setup:
+
+https://github.com/solana-labs/wallet-adapter/blob/master/APP.md
+
+Include polyfills for node.js core modules:
+
+https://github.com/solana-labs/wallet-adapter/tree/master/packages/starter/create-react-app-starter
 
 More: https://github.com/solana-labs/wallet-adapter/tree/master/packages/starter
 
