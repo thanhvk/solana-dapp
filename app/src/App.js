@@ -150,7 +150,7 @@ function App() {
 
 const AppWithProvider = () => (
   <ConnectionProvider endpoint={clusterApiUrl("devnet")}>
-    <WalletProvider wallets={wallets} autoConnect>
+    <WalletProvider wallets={wallets}>
       <WalletModalProvider>
         <App />
       </WalletModalProvider>
